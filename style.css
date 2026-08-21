@@ -68,12 +68,14 @@ li {
     align-items: baseline;
 
 }
-.organization{
+
+.organization {
     width: 100vw;
     height: auto;
     display: flex;
-   justify-content: space-between;
+    justify-content: space-between;
 }
+
 .hero-section {
     display: flex;
     flex-direction: column;
@@ -253,7 +255,8 @@ footer {
 .p-footer {
     font-size: 8px;
 }
-.menu-inicial{
+
+.menu-inicial {
     margin-right: 50px;
 }
 
@@ -266,71 +269,132 @@ button {
     border-radius: 8px;
 }
 
-@media screen and (max-width:800px){
-     .logo {
-        width: 20vw;
+.menu-toggle {
+    display: none;
+    width: 9vw;
+    height: 40px;
+}
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+    /* ---------- CABEÇALHO ---------- */
+
+    header {
+        position: relative;
     }
 
-    .menu-inicial {
+    .logo {
+        width: 20vw;
+        min-width: 100px;
+        max-width: 160px;
+    }
+
+    /* Botão hambúrguer */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+
+    /* Menu */
+    .menu-inicio {
+        position: absolute;
+        top: 100%;
+        right: 60px;
+        width: 180px;
+        z-index: 1000;
+    }
+
+    .menu-inicio ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        background-color: #111;
+        border-radius: 0 0 8px 8px;
+        box-sizing: border-box;
+    }
+
+    /* Menu aberto pelo JavaScript */
+    .menu-inicio ul.active {
         display: flex;
-        flex-direction: row;
-        font-size: 15px;
+    }
+
+    .menu-inicio li {
         width: 100%;
     }
 
-   
+    .menu-inicio a {
+        display: block;
+        padding: 8px 10px;
+        border-bottom: 1px solid #333;
+    }
 
+
+    /* ---------- HERO ---------- */
+
+    .organization {
+        display: flex;
+        position: relative;
+        padding: 10px;
+        min-height: 250px;
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.7rem;
+        padding: 2px;
+        max-width: 75%;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .nome-principal {
+        font-size: 2rem;
+    }
+
+    .kalarari-hero {
+        font-size: 1rem;
+    }
+
+    /* Pirulito */
     .pirulito {
         width: 20vw;
         max-width: 130px;
         min-width: 80px;
         height: auto;
+
         position: absolute;
         right: 0;
-        /* garante que não sai da tela */
+        top: 50%;
+        transform: translateY(-50%);
+
+        z-index: 1;
     }
 
-    .organization {
-        display: flex;
-        padding: 10px;
-    }
 
-    .hero-section {
-        display: flex;
-        flex-direction: column;
-        font-size: 0.7rem;
-        padding: 2px;
-        max-width: 80%;
-        white-space: normal;
-        /* permite quebra automática */
-        overflow-wrap: break-word;
-        /* quebra palavras grandes */
-        word-break: break-word;
-        /* força quebra se necessário */
-
-    }
-
-    .img-logo-servico {
-        width: 14vw;
-        height: auto;
-        margin-top: 10px;
-    }
+    /* ---------- SERVIÇOS ---------- */
 
     #servicos {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: stretch;
+
         background: rgb(40, 40, 40);
         height: auto;
+
         border-radius: 15px;
         padding: 10px;
-
-    }
-
-    #servicos p {
-        font-size: 10px;
-
     }
 
     .servico {
@@ -339,39 +403,52 @@ button {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+
         min-height: 140px;
     }
+
+    .img-logo-servico {
+        width: 14vw;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    #servicos p {
+        font-size: 10px;
+    }
+
+
+    /* ---------- EQUIPE ---------- */
 
     .funcionario {
         width: 17vw;
         margin: 5px;
     }
 
-    .kalarari-hero {
-        font-size: 1rem;
-    }
 
-    .nome-principal {
-        font-size: 2rem;
+    /* ---------- CORTES ---------- */
+
+    .cortes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+        justify-content: center;
+        align-items: center;
+
+        width: 90%;
+        margin: 0 auto;
     }
 
     .img-corte {
         width: 100%;
         height: auto;
         object-fit: cover;
-        /* mantém proporção sem distorcer */
         border-radius: 10px;
     }
 
-    .cortes {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        margin: 0 auto;
-    }
+
+    /* ---------- AGENDAMENTO ---------- */
 
     .texto-agendamento {
         font-size: 15px;
@@ -380,174 +457,90 @@ button {
     .button-agends {
         margin: 5px;
         padding: 2px;
+
         width: 50vw;
         height: 5vh;
-        font-size: 12px;
 
+        font-size: 12px;
     }
-/* ? section contato   */
+
+
+    /* ---------- CONTATO ---------- */
+
     #contato {
         display: flex;
         flex-direction: column;
-            margin: 5px;
-            justify-content: center;
-            align-items: center;
+
+        margin: 5px;
+
+        justify-content: center;
+        align-items: center;
     }
 
     .logo-kalarari {
         width: 50%;
-        height: 50%;
+        height: auto;
+
         margin-top: 5px;
         padding: 0;
     }
-    .texto-contato{
+
+    .texto-contato {
         font-size: 15px;
     }
-    .footer{
-height: 5vh;
-font-size: 10px;
+
+
+    /* ---------- RODAPÉ ---------- */
+
+    .footer {
+        height: 5vh;
+        font-size: 10px;
     }
 }
 
 
-@media screen and (max-width: 750px) {
+/* =========================================================
+   TELAS MUITO PEQUENAS
+   ========================================================= */
 
-    .logo {
-        width: 20vw;
+@media screen and (max-width: 500px) {
+
+    .menu-toggle {
+        right: 20px;
     }
 
-    .menu-inicial {
-        display: flex;
-        flex-direction: row;
-        font-size: 10px;
-        width: 100%;
-    }
-
-
-    .pirulito {
-        width: 25vw;
-        max-width: 150px;
-        min-width: 80px;
-        height: auto;
-        position: absolute;
-        right: 0;
-        /* garante que não sai da tela */
+    .menu-inicio {
+        right: 20px;
+        width: 170px;
     }
 
     .organization {
-        display: flex;
+        min-height: 230px;
     }
 
     .hero-section {
-        display: flex;
-        flex-direction: column;
-        font-size: 0.7rem;
-        padding: 2px;
-        max-width: 80%;
-        white-space: normal;
-        /* permite quebra automática */
-        overflow-wrap: break-word;
-        /* quebra palavras grandes */
-        word-break: break-word;
-        /* força quebra se necessário */
-
-    }
-
-    .img-logo-servico {
-        width: 14vw;
-        height: auto;
-        margin-top: 10px;
-    }
-
-    #servicos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: stretch;
-        background: rgb(40, 40, 40);
-        height: auto;
-        border-radius: 15px;
-        padding: 10px;
-
-    }
-
-    #servicos p {
-        font-size: 10px;
-
-    }
-
-    .servico {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        min-height: 140px;
-    }
-
-    .funcionario {
-        width: 17vw;
-        margin: 5px;
-    }
-
-    .kalarari-hero {
-        font-size: 1rem;
+        max-width: 70%;
     }
 
     .nome-principal {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
-    .img-corte {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        /* mantém proporção sem distorcer */
-        border-radius: 10px;
+    .kalarari-hero {
+        font-size: 0.9rem;
+    }
+
+    .pirulito {
+        width: 22vw;
+        min-width: 70px;
+    }
+
+    .funcionario {
+        width: 18vw;
     }
 
     .cortes {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .texto-agendamento {
-        font-size: 15px;
-    }
-
-    .button-agends {
-        margin: 5px;
-        padding: 2px;
-        width: 50vw;
-        height: 5vh;
-        font-size: 12px;
-
-    }
-/* ? section contato   */
-    #contato {
-        display: flex;
-        flex-direction: column;
-            margin: 5px;
-            justify-content: center;
-            align-items: center;
-    }
-
-    .logo-kalarari {
-        width: 50%;
-        height: 50%;
-        margin-top: 5px;
-        padding: 0;
-    }
-    .texto-contato{
-        font-size: 15px;
-    }
-    .footer{
-height: 5vh;
-font-size: 10px;
+        gap: 6px;
     }
 }
