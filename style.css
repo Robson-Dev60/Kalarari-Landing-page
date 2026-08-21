@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #D4AF37;
+}
+
+body {
+    background: black;
+    padding: 25px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 10px;
+    width: 100vw;
+    height: 8vh;
+}
+
+.logo {
+    width: 10vw;
+}
+
+.nome-barbearia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-logo {
+
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    padding: 5px;
+    margin: 10px;
+}
+
+li {
+    display: inline-block;
+    margin: 0 10px 0;
+}
+
+.pirulito {
+    width: 15vw;
+    max-width: 250px;
+}
+
+#hero {
+    background-image: url("./assents/img-fundo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+.organization{
+    width: 100vw;
+    height: auto;
+    display: flex;
+   justify-content: space-between;
+}
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem;
+    gap: 15px;
+}
+
+.nome-principal {
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #FFD700, #D4AF37, #C9A227);
+    background-clip: text;
+    /* versão padrão */
+    -webkit-background-clip: text;
+    /* compatibilidade com Chrome/Safari */
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(75, 46, 0, 0.4);
+}
+
+h3 {
+    font-weight: bold;
+    background: linear-gradient(45deg, #FFD700, #D4AF37, #C9A227);
+    background-clip: text;
+    /* versão padrão */
+    -webkit-background-clip: text;
+    /* compatibilidade com Chrome/Safari */
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(75, 46, 0, 0.4);
+}
+
+#servicos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(40, 40, 40);
+    width: 90vw;
+    height: 150px;
+    border-radius: 25px;
+    margin: 15px auto;
+
+    /* centraliza o bloco na página */
+}
+
+.servico {
+    flex: 1;
+    /* cada item ocupa espaço proporcional */
+    text-align: center;
+    /* centraliza texto dentro do item */
+    max-width: 200px;
+}
+
+.img-logo-servico {
+    width: 65px;
+    height: 55px;
+}
+
+#equipe {
+    justify-items: center;
+    background-image: url("./assents/funcionario-fundo.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    padding-bottom: 15px;
+
+}
+
+.texto-equipe {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0 20px;
+}
+
+.equipe-logo {
+    width: 15vw;
+
+}
+
+.fotos-funcionarios {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+}
+
+.fotos-funcionarios p {
+    margin: 5px 15px 0 0;
+    font-size: 15px;
+}
+
+
+
+#exemplos {
+    background: rgb(40, 40, 40);
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.cortes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colunas iguais */
+
+    width: 80%;
+    align-self: center;
+    justify-self: center;
+    gap: 25px;
+}
+
+.img-corte {
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    width: max(10vw, 150px);
+
+}
+
+.texto-exemplo {
+    margin: 15px 0;
+
+}
+
+#agendamento {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    height: 25vh;
+    background-image: url("./assents/barbearia-fundo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.texto-agendamento {
+    font-size: 20px;
+    margin-left: 6vw;
+
+}
+
+.button-agends {
+    margin-right: 6vw;
+    width: 25vw;
+    height: 6vh;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#contato {
+    display: flex;
+    flex-direction: row;
+    padding: 35px;
+
+}
+
+.texto-contato {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px;
+
+}
+
+.logo-kalarari {
+    width: max(15vw, 100px);
+    margin: 20px 30px;
+}
+
+footer {
+    justify-items: center;
+    margin: 25px 0 10px 0;
+    height: 3vh;
+}
+
+.p-footer {
+    font-size: 8px;
+}
+.menu-inicial{
+    margin-right: 50px;
+}
+
+button {
+    width: 200px;
+    height: 30px;
+    background: linear-gradient(45deg, #FFD700, #D4AF37, #C9A227);
+    color: #4B2E00;
+    border: solid 2px #a5861f;
+    border-radius: 8px;
+}
+
+@media screen and (max-width:800px){
+     .logo {
+        width: 20vw;
+    }
+
+    .menu-inicial {
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
+        width: 100%;
+    }
+
+   
+
+    .pirulito {
+        width: 20vw;
+        max-width: 130px;
+        min-width: 80px;
+        height: auto;
+        position: absolute;
+        right: 0;
+        /* garante que não sai da tela */
+    }
+
+    .organization {
+        display: flex;
+        padding: 10px;
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.7rem;
+        padding: 2px;
+        max-width: 80%;
+        white-space: normal;
+        /* permite quebra automática */
+        overflow-wrap: break-word;
+        /* quebra palavras grandes */
+        word-break: break-word;
+        /* força quebra se necessário */
+
+    }
+
+    .img-logo-servico {
+        width: 14vw;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    #servicos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        background: rgb(40, 40, 40);
+        height: auto;
+        border-radius: 15px;
+        padding: 10px;
+
+    }
+
+    #servicos p {
+        font-size: 10px;
+
+    }
+
+    .servico {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 140px;
+    }
+
+    .funcionario {
+        width: 17vw;
+        margin: 5px;
+    }
+
+    .kalarari-hero {
+        font-size: 1rem;
+    }
+
+    .nome-principal {
+        font-size: 2rem;
+    }
+
+    .img-corte {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* mantém proporção sem distorcer */
+        border-radius: 10px;
+    }
+
+    .cortes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .texto-agendamento {
+        font-size: 15px;
+    }
+
+    .button-agends {
+        margin: 5px;
+        padding: 2px;
+        width: 50vw;
+        height: 5vh;
+        font-size: 12px;
+
+    }
+/* ? section contato   */
+    #contato {
+        display: flex;
+        flex-direction: column;
+            margin: 5px;
+            justify-content: center;
+            align-items: center;
+    }
+
+    .logo-kalarari {
+        width: 50%;
+        height: 50%;
+        margin-top: 5px;
+        padding: 0;
+    }
+    .texto-contato{
+        font-size: 15px;
+    }
+    .footer{
+height: 5vh;
+font-size: 10px;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+
+    .logo {
+        width: 20vw;
+    }
+
+    .menu-inicial {
+        display: flex;
+        flex-direction: row;
+        font-size: 10px;
+        width: 100%;
+    }
+
+
+    .pirulito {
+        width: 25vw;
+        max-width: 150px;
+        min-width: 80px;
+        height: auto;
+        position: absolute;
+        right: 0;
+        /* garante que não sai da tela */
+    }
+
+    .organization {
+        display: flex;
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.7rem;
+        padding: 2px;
+        max-width: 80%;
+        white-space: normal;
+        /* permite quebra automática */
+        overflow-wrap: break-word;
+        /* quebra palavras grandes */
+        word-break: break-word;
+        /* força quebra se necessário */
+
+    }
+
+    .img-logo-servico {
+        width: 14vw;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    #servicos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        background: rgb(40, 40, 40);
+        height: auto;
+        border-radius: 15px;
+        padding: 10px;
+
+    }
+
+    #servicos p {
+        font-size: 10px;
+
+    }
+
+    .servico {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 140px;
+    }
+
+    .funcionario {
+        width: 17vw;
+        margin: 5px;
+    }
+
+    .kalarari-hero {
+        font-size: 1rem;
+    }
+
+    .nome-principal {
+        font-size: 2rem;
+    }
+
+    .img-corte {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* mantém proporção sem distorcer */
+        border-radius: 10px;
+    }
+
+    .cortes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .texto-agendamento {
+        font-size: 15px;
+    }
+
+    .button-agends {
+        margin: 5px;
+        padding: 2px;
+        width: 50vw;
+        height: 5vh;
+        font-size: 12px;
+
+    }
+/* ? section contato   */
+    #contato {
+        display: flex;
+        flex-direction: column;
+            margin: 5px;
+            justify-content: center;
+            align-items: center;
+    }
+
+    .logo-kalarari {
+        width: 50%;
+        height: 50%;
+        margin-top: 5px;
+        padding: 0;
+    }
+    .texto-contato{
+        font-size: 15px;
+    }
+    .footer{
+height: 5vh;
+font-size: 10px;
+    }
+}

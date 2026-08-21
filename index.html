@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>KALARARY</title>
+</head>
+
+<body>
+    <header id="inicio">
+        <div class="texto-logo">
+            <img class="logo" src="./assents/img-logo.png" alt="">
+        </div>
+
+        <div class="menu-inicial">
+            <nav>
+                <ul>
+                    <li>inicio</li>
+                    <li onclick="location.href='#servico'">serviços</li>
+                    <li onclick="location.href='#equipe'">equipe</li>
+                    <li onclick="location.href='#exemplos'">cortes</li>
+                    <li onclick="location.href='#contato'">contato</li>
+                </ul>
+           </nav>
+        </div>
+    </header>
+    <section id="hero">
+        <div class="organization">
+            <div class="hero-section">
+                <h1 class="nome-principal">KALARARY</h1>
+                <h3 class="kalarari-hero">______BARBEARIA_______</h3>
+                <h4>Estilo, atitude e confiaça em cada corte.</h4>
+                <p>Na Kalarary Barbearia, você encontra qualidade conforto e um atendimento feito para você</p>
+                <button type="button" onclick="location.href='#contato' ">🕐 Agende seu horario </button>
+            </div>
+            <div> <img class="pirulito" src="./assents/pirulito-barbearia.png" alt=""></div>
+        </div>
+    </section>
+    <section id="servicos">
+
+        <div class="servico">
+            <img class="img-logo-servico" src="./assents/tesoura-img.png" alt="">
+            <h5>Cortes modernos</h5>
+            <p>Os estilos mais atuais para você.</p>
+        </div>
+        <div class="servico">
+            <img class="img-logo-servico" src="./assents/cabelo-img.png" alt="">
+
+            <h5>Barba feita</h5>
+            <p>Cuidado e precisão em cada detalhe.</p>
+        </div>
+        <div class="servico">
+            <img class="img-logo-servico" src="./assents/navalha-img.png" alt="">
+
+            <h5>Sombrancelha</h5>
+            <p>Um olhar mais marcante.</p>
+        </div>
+        <div class="servico">
+            <img class="img-logo-servico" src="./assents/secador-img.png" alt="">
+
+            <h5>Produtos de qualidade</h5>
+            <p>O melhor para o seu cabelo e barba.</p>
+        </div>
+
+
+    </section>
+    <section id="equipe">
+        <div class="texto-equipe">
+            <img class="equipe-logo" src="./assents/equipe-logo.png" alt="">
+            <h3>NOSSA EQUIPE</h3>
+            <p>Profissionais qualificados, prontos para atender você com excelência</p>
+        </div>
+        <div class="fotos-funcionarios">
+            <div>
+                <img class="funcionario" src="./assents/persona.png" alt="">
+                <p>Nome do Profissional</p>
+            </div>
+            <div>
+                <img class="funcionario" src="./assents/persona.png" alt="">
+                <p>Nome do Profissional</p>
+            </div>
+            <div>
+                <img class="funcionario" src="./assents/persona.png" alt="">
+                <p>Nome do Profissional</p>
+            </div>
+            <div>
+                <img class="funcionario" src="./assents/persona.png" alt="">
+                <p>Nome do Profissional</p>
+            </div>
+        </div>
+    </section>
+    <section id="exemplos">
+        <div class="texto-exemplo">
+            <img class="logo" src="./assents/cabelo-img.png" alt="">
+            <h3>EXEMPLOS DE CORTES</h3>
+            <p>Inspiração para o seu prôximo visual</p>
+        </div>
+        <div class="cortes">
+            <img class="img-corte" src="./assents/cortes/corte-1.png" alt="">
+            <img class="img-corte" src="./assents/cortes/corte-2.png" alt="">
+            <img class="img-corte" src="./assents/cortes/corte-3.png" alt="">
+            <img class="img-corte" src="./assents/cortes/corte-4.png" alt="">
+            <img class="img-corte" src="./assents/cortes/corte-5.png" alt="">
+            <img class="img-corte" src="./assents/cortes/corte-6.png" alt="">
+            <img class="img-corte" src="./assents/cortes/corte-7.png" alt="">
+            <img class="img-corte" src="./assents/cortes/corte-8.png" alt="">
+        </div>
+    </section>
+
+    <section id="agendamento">
+        <div class="texto-agendamento">
+            <h3>Cuide do seu estilo.</h3>
+            <h5>Agende seu horário agora e venha para a Kalarary.</h5>
+        </div>
+        <button class="button-agends" onclick="whats()" type="button">🕐 Agendar
+            horario</button>
+
+    </section>
+    <section id="contato">
+
+        <img class="logo-kalarari" src="./assents/kalarary-fundo.png" alt="">
+
+
+        <div class="texto-contato">
+            <h4>Contato</h4>
+            <p>📞 (00) 0 0000-0000</p>
+            <p>📍 Rua do bobo, numero 0</p>
+            <p>📧 contato@gmail.com</p>
+        </div>
+        <div class="redes-sociais">
+            <h3>Siga-nos</h3>
+            <div></div>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <p>@2026 Kalarrari Barbearia, Direitos Reservados</p>
+        <p class="p-footer">Este site não contem ligação com barbearias reais</p>
+    </footer>
+    <script>
+        function whats() {
+            const mensagem = "ola, gostaria de agendar um horário na Kalarary"
+            window.open("https://wa.me/5599992155967?text=" + encodeURIComponent(mensagem), "_blank")
+        }
+    </script>
+</body>
+
+</html>
