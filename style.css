@@ -158,14 +158,43 @@ h3 {
 .fotos-funcionarios {
     display: flex;
     flex-direction: row;
-    margin: 5px 0;
+    gap: 20px;
+    /* espaço entre os cards */
+    overflow-x: auto;
+    /* ativa rolagem horizontal */
+    scroll-snap-type: x mandatory;
+    /* opcional: faz o scroll “travar” em cada item */
+    padding: 10px;
 }
 
-.fotos-funcionarios p {
-    margin: 5px 15px 0 0;
-    font-size: 15px;
+.fotos-funcionarios div {
+    flex: 0 0 auto;
+    /* impede que os itens encolham */
+    scroll-snap-align: start;
+    /* opcional: alinha cada item no início ao rolar */
+    text-align: center;
 }
 
+.fotos-funcionarios::-webkit-scrollbar {
+    height: 6px;
+    /* altura mínima da barra */
+}
+
+.fotos-funcionarios::-webkit-scrollbar-track {
+    background: transparent;
+    /* trilho invisível */
+}
+
+.fotos-funcionarios::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.3);
+    /* dourado bem transparente */
+    border-radius: 10px;
+}
+
+.fotos-funcionarios::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 175, 55, 0.6);
+    /* aparece mais ao passar o mouse */
+}
 
 
 #exemplos {
@@ -274,9 +303,14 @@ button {
     width: 9vw;
     height: 40px;
 }
+
 /* =========================================================
+   =========================================================
    RESPONSIVIDADE
-   ========================================================= */
+   ========================================================= 
+   =========================================================
+   */
+
 
 @media screen and (max-width: 800px) {
 
@@ -296,7 +330,7 @@ button {
     .menu-toggle {
         display: block;
         position: absolute;
-        right: 60px;
+        right: 2rem;
         top: 50%;
         transform: translateY(-50%);
         z-index: 1001;
@@ -417,7 +451,10 @@ button {
         font-size: 10px;
     }
 
-
+#equipe{
+    position: relative;
+    overflow: hidden;
+}
     /* ---------- EQUIPE ---------- */
 
     .funcionario {
@@ -496,6 +533,25 @@ button {
         height: 5vh;
         font-size: 10px;
     }
+
+   .fotos-funcionarios {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 10px 20px;          /* adiciona espaço nas laterais */
+  scroll-snap-type: x mandatory;
+  scroll-padding: 20px;        /* garante que o primeiro e último item não fiquem cortados */
+}
+
+.fotos-funcionarios div {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+
 }
 
 
@@ -506,7 +562,7 @@ button {
 @media screen and (max-width: 500px) {
 
     .menu-toggle {
-        right: 20px;
+        right: 2rem;
     }
 
     .menu-inicio {
@@ -538,6 +594,7 @@ button {
     .funcionario {
         width: 18vw;
     }
+
 
     .cortes {
         grid-template-columns: repeat(3, 1fr);
