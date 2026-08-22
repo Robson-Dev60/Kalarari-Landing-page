@@ -4,7 +4,9 @@
     box-sizing: border-box;
     color: #D4AF37;
 }
-
+.minimo{
+    display: none;
+}
 body {
     background: black;
     padding: 25px;
@@ -159,41 +161,42 @@ h3 {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    font-size: 0.8rem;
     /* espaço entre os cards */
     overflow-x: auto;
     /* ativa rolagem horizontal */
     scroll-snap-type: x mandatory;
-    /* opcional: faz o scroll “travar” em cada item */
-    padding: 10px;
+
+    padding: 5px;
 }
 
 .fotos-funcionarios div {
     flex: 0 0 auto;
-    /* impede que os itens encolham */
+
     scroll-snap-align: start;
-    /* opcional: alinha cada item no início ao rolar */
+
     text-align: center;
 }
 
 .fotos-funcionarios::-webkit-scrollbar {
-    height: 6px;
-    /* altura mínima da barra */
+    height: 4px;
+
 }
 
 .fotos-funcionarios::-webkit-scrollbar-track {
     background: transparent;
-    /* trilho invisível */
+
 }
 
 .fotos-funcionarios::-webkit-scrollbar-thumb {
     background: rgba(212, 175, 55, 0.3);
-    /* dourado bem transparente */
+
     border-radius: 10px;
 }
 
 .fotos-funcionarios::-webkit-scrollbar-thumb:hover {
     background: rgba(212, 175, 55, 0.6);
-    /* aparece mais ao passar o mouse */
+
 }
 
 
@@ -345,7 +348,7 @@ button {
         z-index: 1000;
     }
 
-    .menu-inicio ul {
+    .funcionario .menu-inicio ul {
         display: none;
         flex-direction: column;
         width: 100%;
@@ -448,17 +451,27 @@ button {
     }
 
     #servicos p {
-        font-size: 10px;
+        font-size: 0.6rem;
+        font-weight: 100;
+        color: #d9ba53 ;
+    }
+    #servicos h5{
+        color:  #be991e;
+        font-weight: 900;
+font-size: 0.8rem;
+width: auto;
+margin-bottom: 2px;
     }
 
-#equipe{
-    position: relative;
-    overflow: hidden;
-}
+    #equipe {
+        position: relative;
+        overflow: hidden;
+    }
+
     /* ---------- EQUIPE ---------- */
 
     .funcionario {
-        width: 17vw;
+        width: 15vw;
         margin: 5px;
     }
 
@@ -494,10 +507,8 @@ button {
     .button-agends {
         margin: 5px;
         padding: 2px;
-
         width: 50vw;
         height: 5vh;
-
         font-size: 12px;
     }
 
@@ -507,9 +518,7 @@ button {
     #contato {
         display: flex;
         flex-direction: column;
-
         margin: 5px;
-
         justify-content: center;
         align-items: center;
     }
@@ -517,7 +526,6 @@ button {
     .logo-kalarari {
         width: 50%;
         height: auto;
-
         margin-top: 5px;
         padding: 0;
     }
@@ -528,28 +536,27 @@ button {
 
 
     /* ---------- RODAPÉ ---------- */
-
     .footer {
         height: 5vh;
         font-size: 10px;
     }
 
-   .fotos-funcionarios {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  overflow-x: auto;
-  max-width: 100%;
-  padding: 10px 20px;          /* adiciona espaço nas laterais */
-  scroll-snap-type: x mandatory;
-  scroll-padding: 20px;        /* garante que o primeiro e último item não fiquem cortados */
-}
+    .fotos-funcionarios {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        overflow-x: auto;
+        max-width: 100%;
+        padding: 5px 10px;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 20px;
+    }
 
-.fotos-funcionarios div {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  text-align: center;
-}
+    .fotos-funcionarios div {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        text-align: center;
+    }
 
 
 }
@@ -592,12 +599,66 @@ button {
     }
 
     .funcionario {
-        width: 18vw;
+        width: 16vw;
     }
 
+    .fotos-funcionarios {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        font-size: 0.8rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 5px;
+    }
+
+    .fotos-funcionarios div {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        text-align: center;
+    }
+
+    .fotos-funcionarios::-webkit-scrollbar {
+        height: 4px;
+
+    }
+
+    .fotos-funcionarios::-webkit-scrollbar-track {
+        background: transparent;
+
+    }
+
+    .fotos-funcionarios::-webkit-scrollbar-thumb {
+        background: rgba(212, 175, 55, 0.3);
+
+        border-radius: 10px;
+    }
+
+    .fotos-funcionarios::-webkit-scrollbar-thumb:hover {
+        background: rgba(212, 175, 55, 0.6);
+
+    }
 
     .cortes {
         grid-template-columns: repeat(3, 1fr);
         gap: 6px;
     }
+}
+@media screen  and (max-width:250px){
+.white{
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+    width: 200vw;
+    height: 100vh;
+    background: #000000;
+    z-index: -1;
+}
+    .minimo{
+    display: flex;
+    font-size: 50px;
+    color: #ffffff;
+    z-index: 1;
+}
 }

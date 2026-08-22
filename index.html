@@ -5,32 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-       <link rel="icon" type="image/png" href="./assents/favicon.png">
+    <link rel="icon" type="image/png" href="./assents/favicon.png">
 
     <title>KALARARY</title>
 </head>
 
 <body>
- <header id="inicio">
- 
-  <div class="texto-logo">
-    <img class="logo" src="./assents/img-logo.png" alt="Logo Kalarary">
-  </div>
+  <h1 class="minimo">250px? serio? 😒</h1><div class="white"></div>  
+    <header id="inicio">
 
-  <!-- Ícone do menu -->
-  <button type="button" class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="texto-logo">
+            <img class="logo" src="./assents/img-logo.png" alt="Logo Kalarary">
+        </div>
 
-  <!-- Menu de navegação -->
-  <nav class="menu-inicio" id="menu">
-    <ul>
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#equipe">Equipe</a></li>
-      <li><a href="#exemplos">Cortes</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
-</header>
+        <!-- Ícone do menu -->
+        <button type="button" class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <!-- Menu de navegação -->
+        <nav class="menu-inicio" id="menu">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#exemplos">Cortes</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <section id="hero">
         <div class="organization">
@@ -83,7 +84,7 @@
                 <img class="funcionario" src="./assents/persona.png" alt="">
                 <p>Nome do Profissional</p>
             </div>
-               <div>
+            <div>
                 <img class="funcionario" src="./assents/persona.png" alt="">
                 <p>Nome do Profissional</p>
             </div>
@@ -154,10 +155,10 @@
             const mensagem = "ola, gostaria de agendar um horário na Kalarary"
             window.open("https://wa.me/5599992155967?text=" + encodeURIComponent(mensagem), "_blank")
         }
-    
-  function toggleMenu() {
-    document.querySelector(".menu-inicio ul").classList.toggle("active");
-  }
+
+        function toggleMenu() {
+            document.querySelector(".menu-inicio ul").classList.toggle("active");
+        }
 
     </script>
 </body>
