@@ -339,7 +339,7 @@ button {
         z-index: 1001;
     }
 
-    /* Menu */
+    
     .menu-inicio {
         position: absolute;
         top: 100%;
@@ -359,7 +359,6 @@ button {
         box-sizing: border-box;
     }
 
-    /* Menu aberto pelo JavaScript */
     .menu-inicio ul.active {
         display: flex;
     }
@@ -422,46 +421,51 @@ button {
     /* ---------- SERVIÇOS ---------- */
 
     #servicos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
 
-        background: rgb(40, 40, 40);
-        height: auto;
+    width: 90vw;
+    height: auto;
 
-        border-radius: 15px;
-        padding: 10px;
-    }
+    background: rgb(40, 40, 40);
+    border-radius: 15px;
 
-    .servico {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+    padding: 15px;
+    margin: 15px auto;
+}
 
-        min-height: 140px;
-    }
+.servico {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
-    .img-logo-servico {
-        width: 14vw;
-        height: auto;
-        margin-top: 10px;
-    }
+    width: 100%;
+    min-height: 90px;
 
-    #servicos p {
-        font-size: 0.6rem;
-        font-weight: 100;
-        color: #d9ba53 ;
-    }
-    #servicos h5{
-        color:  #be991e;
-        font-weight: 900;
-font-size: 0.8rem;
-width: auto;
-margin-bottom: 2px;
-    }
+    text-align: center;
+}
+
+.img-logo-servico {
+    width: 55px;
+    height: 50px;
+    object-fit: contain;
+    margin: 5px 0 8px;
+}
+
+#servicos h5 {
+    font-size: 0.8rem;
+    line-height: 1.1;
+    margin: 0 0 5px;
+}
+
+#servicos p {
+    font-size: 0.65rem;
+    line-height: 1.2;
+    margin: 0;
+    max-width: 120px;
+}
 
     #equipe {
         position: relative;
