@@ -348,7 +348,7 @@ button {
         z-index: 1000;
     }
 
-    .funcionario .menu-inicio ul {
+    .menu-inicio ul {
         display: none;
         flex-direction: column;
         width: 100%;
@@ -618,47 +618,5 @@ margin-bottom: 2px;
         text-align: center;
     }
 
-    .fotos-funcionarios::-webkit-scrollbar {
-        height: 4px;
-
-    }
-
-    .fotos-funcionarios::-webkit-scrollbar-track {
-        background: transparent;
-
-    }
-
-    .fotos-funcionarios::-webkit-scrollbar-thumb {
-        background: rgba(212, 175, 55, 0.3);
-
-        border-radius: 10px;
-    }
-
-    .fotos-funcionarios::-webkit-scrollbar-thumb:hover {
-        background: rgba(212, 175, 55, 0.6);
-
-    }
-
-    .cortes {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 6px;
-    }
-}
-@media screen  and (max-width:250px){
-.white{
-    display: flex;
-
-    margin: 0;
-    padding: 0;
-    width: 200vw;
-    height: 100vh;
-    background: #000000;
-    z-index: -1;
-}
-    .minimo{
-    display: flex;
-    font-size: 50px;
-    color: #ffffff;
-    z-index: 1;
-}
+  
 }
